@@ -1,5 +1,4 @@
-# Create a clean README.md file
-@"
+
 # Medical Appointment Scheduler
 
 ![Project Banner](https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80)
