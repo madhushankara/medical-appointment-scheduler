@@ -1,4 +1,4 @@
-# Create a clean README.md file
+# Create a proper Markdown README file
 @"
 # Medical Appointment Scheduler
 
@@ -72,4 +72,4 @@ This project was developed as part of my coursework in web application developme
 ## 📞 Contact
 
 Made by Madhu Shankara
-
+"@ | Out-File -FilePath README.md -Encoding utf8

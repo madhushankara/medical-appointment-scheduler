@@ -1,5 +1,8 @@
-# Create/update .gitignore to exclude sensitive files
-cat > .gitignore << EOL
+# Copy all files from the original project, excluding sensitive ones
+robocopy ..\medical-appointment-scheduler . /E /XD .git /XF *.env backend\.env separate-deploy.ps1 "*.db"
+
+# Create a proper .gitignore file
+@"
 # Dependencies
 node_modules/
 .pnp
@@ -37,4 +40,7 @@ yarn-error.log*
 
 # OS generated files
 .DS_Store
-EOL
+
+# Database files
+*.db
+"@ > .gitignore 
