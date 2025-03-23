@@ -1,0 +1,18 @@
+{
+  "name": "medical-scheduler-app",
+  "version": "1.0.0",
+  "description": "Combined Medical Scheduler Application",
+  "private": true,
+  "scripts": {
+    "start": "cd backend && go run cmd/server/main.go",
+    "build": "echo \"Root build script - preparing environment\"",
+    "heroku-postbuild": "cd frontend && npm install && npm run build",
+    "dev:frontend": "cd frontend && npm start",
+    "dev:backend": "cd backend && go run cmd/server/main.go"
+  },
+  "engines": {
+    "node": "18.x",
+    "npm": "8.x",
+    "go": "1.24.x"
+  }
+}

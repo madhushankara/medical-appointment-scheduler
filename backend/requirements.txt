@@ -1,0 +1,2 @@
+# This file exists only to prevent Heroku from incorrectly detecting this as a Python app
+# The actual application is a Go application
