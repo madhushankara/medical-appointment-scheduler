@@ -1,7 +1,5 @@
 {
-  "name": "m    "react-router-dom": "^6.22.1",
-    "react-scripts": "^5.0.1",
-    "serve": "^14.2.1"cal-appointment-scheduler",
+  "name": "medical-appointment-scheduler",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://madhushankara.github.io/medical-appointment-scheduler",
@@ -15,7 +13,7 @@
     "react-dom": "^18.2.0",
     "react-error-boundary": "^5.0.0",
     "react-router-dom": "^6.22.1",
-    "react-scripts": "^0.0.0",
+    "react-scripts": "^5.0.1",
     "serve": "^10.0.2"
   },
   "scripts": {
@@ -58,3 +56,4 @@
     "npm": "8.x"
   }
 }
+ 
