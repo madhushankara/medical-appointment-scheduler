@@ -6,7 +6,7 @@
 
 The Medical Appointment Scheduler is a full-stack web application that simplifies the process of scheduling and managing medical appointments. Built with React and modern web technologies, it provides an intuitive interface for booking appointments and accessing medical consultations.
 
-**Live Demo:** - https://madhushankara.github.io/medical-appointment-scheduler/
+**Live Demo:** - [https://madhushankara.github.io/medical-appointment-scheduler/](https://madhushankara.github.io/medical-appointment-scheduler/)
 
 ended - [https://medical-scheduler-client-be935bd7ca55.herokuapp.com/](https://medical-scheduler-client-be935bd7ca55.herokuapp.com/)
 
