@@ -1,5 +1,7 @@
 {
-  "name": "medical-appointment-scheduler",
+  "name": "m    "react-router-dom": "^6.22.1",
+    "react-scripts": "^5.0.1",
+    "serve": "^14.2.1"cal-appointment-scheduler",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://madhushankara.github.io/medical-appointment-scheduler",
