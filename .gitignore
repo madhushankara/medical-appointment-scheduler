@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Copy all files from the original project, excluding sensitive ones
 robocopy ..\medical-appointment-scheduler . /E /XD .git /XF *.env backend\.env separate-deploy.ps1 "*.db"
 
@@ -44,3 +45,45 @@ yarn-error.log*
 # Database files
 *.db
 "@ > .gitignore 
+=======
+# Create/update .gitignore to exclude sensitive files
+cat > .gitignore << EOL
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Production
+build/
+dist/
+
+# Environment files (containing secrets)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.backup
+*.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+EOL
+>>>>>>> df8a414f5e24d51612f65a4fc96493796d163e4b
