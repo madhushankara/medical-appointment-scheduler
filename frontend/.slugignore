@@ -1,0 +1,6 @@
+# This file tells Heroku which files to ignore during deployment
+README.md
+deploy.sh
+deploy.ps1
+.env.example
+.git

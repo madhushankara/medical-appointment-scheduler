@@ -1,0 +1,23 @@
+# Node.js dependencies are managed via package.json
+# This file is for documentation purposes only
+
+# React and Core
+react: ^18.2.0
+react-dom: ^18.2.0
+react-router-dom: ^6.22.1
+react-scripts: ^5.0.1
+
+# UI and Components
+@headlessui/react: ^1.7.18
+react-datepicker: ^6.9.0
+
+# HTTP and API
+axios: ^1.8.4
+
+# Utilities
+date-fns: ^3.3.1
+@emailjs/browser: ^4.4.1
+
+# Development
+autoprefixer: ^10.4.21
+postcss: ^8.5.3

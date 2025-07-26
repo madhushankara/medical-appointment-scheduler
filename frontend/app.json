@@ -1,0 +1,10 @@
+{
+  "name": "medical-scheduler-client",
+  "description": "Medical Appointment Scheduler Frontend",
+  "repository": "https://github.com/madhushankara/medical-appointment-scheduler",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

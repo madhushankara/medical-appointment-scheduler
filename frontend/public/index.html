@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Medical Appointment Scheduler with AI Assistant"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Medical Appointment Scheduler</title>
+    <style>
+      /* Emergency fallback styles for ChatBot */
+      .emergency-chat {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 20000;
+        background: #4285f4;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <!-- Emergency fallback script -->
+    <script>
+      // This will add an emergency ChatBot button if the component doesn't load
+      setTimeout(function() {
+        const chatButton = document.querySelector('.chatbot-button, .chatbot-container');
+        if (!chatButton) {
+          console.log('ChatBot not found - adding emergency button');
+          const emergencyButton = document.createElement('button');
+          emergencyButton.className = 'emergency-chat';
+          emergencyButton.textContent = 'Chat Support';
+          emergencyButton.onclick = function() {
+            alert('Please use the Email Test feature to test communications');
+          };
+          document.body.appendChild(emergencyButton);
+        }
+      }, 8000);
+    </script>
+  </body>
+</html>
