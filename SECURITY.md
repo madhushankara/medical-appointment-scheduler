@@ -30,10 +30,10 @@ Use one of the following tools to rewrite history:
 ```bash
 pip install git-filter-repo
 
-# Create a replacements file (one pattern per line):
-echo "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==>REMOVED_HF_TOKEN" > /tmp/replacements.txt
-echo "jwt_secret_971a3c8e4d72f59b8e1c0a5b6d8e7f2a==>REMOVED_JWT_SECRET" >> /tmp/replacements.txt
-echo "Zz0gh57bJE9NCCZsv==>REMOVED_EMAILJS_KEY" >> /tmp/replacements.txt
+# Create a replacements file — one "old==>new" pattern per exposed secret:
+echo "<YOUR_OLD_HUGGINGFACE_TOKEN>==>REMOVED_HF_TOKEN" > /tmp/replacements.txt
+echo "<YOUR_OLD_JWT_SECRET>==>REMOVED_JWT_SECRET" >> /tmp/replacements.txt
+echo "<YOUR_OLD_EMAILJS_KEY>==>REMOVED_EMAILJS_KEY" >> /tmp/replacements.txt
 
 git filter-repo --replace-text /tmp/replacements.txt
 
@@ -46,9 +46,10 @@ git push --force --tags origin
 
 ```bash
 # Download from https://rtyley.github.io/bfg-repo-cleaner/
-echo "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" > /tmp/secrets.txt
-echo "jwt_secret_971a3c8e4d72f59b8e1c0a5b6d8e7f2a" >> /tmp/secrets.txt
-echo "Zz0gh57bJE9NCCZsv" >> /tmp/secrets.txt
+# List each exposed secret value (one per line) in a text file:
+echo "<YOUR_OLD_HUGGINGFACE_TOKEN>" > /tmp/secrets.txt
+echo "<YOUR_OLD_JWT_SECRET>" >> /tmp/secrets.txt
+echo "<YOUR_OLD_EMAILJS_KEY>" >> /tmp/secrets.txt
 
 java -jar bfg.jar --replace-text /tmp/secrets.txt
 git reflog expire --expire=now --all
