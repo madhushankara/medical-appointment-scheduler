@@ -17,8 +17,8 @@ function ChatBot() {
   const [apiError, setApiError] = useState(null);
   const apiAttempts = useRef(0);
   
-  // Get HF token from environment if available, otherwise use the hardcoded one
-  const HF_API_KEY = process.env.REACT_APP_HUGGINGFACE_TOKEN || "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";
+  // Get HF token from environment variable
+  const HF_API_KEY = process.env.REACT_APP_HUGGINGFACE_TOKEN || "";
   
   // Show welcome popup on first visit
   useEffect(() => {

@@ -86,8 +86,8 @@ try {
 Write-Host "Setting backend environment variables..." -ForegroundColor Yellow
 heroku config:set NODE_ENV=production --app $backendAppName
 heroku config:set DB_TYPE=postgres --app $backendAppName
-heroku config:set JWT_SECRET=jwt_secret_971a3c8e4d72f59b8e1c0a5b6d8e7f2a --app $backendAppName
-heroku config:set HUGGINGFACE_TOKEN=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 --app $backendAppName
+heroku config:set JWT_SECRET=<your_jwt_secret_here> --app $backendAppName
+heroku config:set HUGGINGFACE_TOKEN=<your_huggingface_token_here> --app $backendAppName
 heroku config:set PORT=8080 --app $backendAppName
 Write-Host "✓ Backend environment configured" -ForegroundColor Green
 
@@ -97,7 +97,7 @@ heroku config:set NODE_ENV=production --app $frontendAppName
 heroku config:set NPM_CONFIG_PRODUCTION=true --app $frontendAppName
 heroku config:set REACT_APP_API_URL=$backendUrl --app $frontendAppName
 heroku config:set REACT_APP_DEBUG_MODE=false --app $frontendAppName
-heroku config:set REACT_APP_EMAILJS_PUBLIC_KEY=Zz0gh57bJE9NCCZsv --app $frontendAppName
+heroku config:set REACT_APP_EMAILJS_PUBLIC_KEY=<your_emailjs_public_key_here> --app $frontendAppName
 heroku config:set REACT_APP_EMAILJS_SERVICE_ID=service_780diqb --app $frontendAppName
 heroku config:set REACT_APP_EMAILJS_TEMPLATE_APPOINTMENT=template_w4wezob --app $frontendAppName
 heroku config:set REACT_APP_EMAILJS_TEMPLATE_REGISTRATION=template_c23sb4o --app $frontendAppName

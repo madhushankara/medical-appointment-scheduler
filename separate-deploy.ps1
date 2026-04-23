@@ -14,8 +14,8 @@ Write-Host "Setting up backend environment..." -ForegroundColor Green
 heroku buildpacks:set heroku/go --app medical-scheduler-api
 heroku addons:create heroku-postgresql:mini-dev --app medical-scheduler-api
 heroku config:set DB_TYPE=postgres --app medical-scheduler-api
-heroku config:set JWT_SECRET=jwt_secret_971a3c8e4d72f59b8e1c0a5b6d8e7f2a --app medical-scheduler-api
-heroku config:set HUGGINGFACE_TOKEN=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 --app medical-scheduler-api
+heroku config:set JWT_SECRET=<your_jwt_secret_here> --app medical-scheduler-api
+heroku config:set HUGGINGFACE_TOKEN=<your_huggingface_token_here> --app medical-scheduler-api
 heroku config:set PORT=8080 --app medical-scheduler-api
 
 # Configure frontend app
@@ -24,11 +24,11 @@ heroku buildpacks:set heroku/nodejs --app medical-scheduler-client
 heroku config:set NODE_ENV=production --app medical-scheduler-client
 heroku config:set NPM_CONFIG_PRODUCTION=true --app medical-scheduler-client
 heroku config:set REACT_APP_API_URL=https://medical-scheduler-api.herokuapp.com/api --app medical-scheduler-client
-heroku config:set REACT_APP_EMAILJS_PUBLIC_KEY=Zz0gh57bJE9NCCZsv --app medical-scheduler-client
+heroku config:set REACT_APP_EMAILJS_PUBLIC_KEY=<your_emailjs_public_key_here> --app medical-scheduler-client
 heroku config:set REACT_APP_EMAILJS_SERVICE_ID=service_780diqb --app medical-scheduler-client
 heroku config:set REACT_APP_EMAILJS_TEMPLATE_APPOINTMENT=template_w4wezob --app medical-scheduler-client
 heroku config:set REACT_APP_EMAILJS_TEMPLATE_REGISTRATION=template_c23sb4o --app medical-scheduler-client
-heroku config:set REACT_APP_HUGGINGFACE_TOKEN=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 --app medical-scheduler-client
+heroku config:set REACT_APP_HUGGINGFACE_TOKEN=<your_huggingface_token_here> --app medical-scheduler-client
 
 # Deploy backend
 Write-Host "Deploying backend..." -ForegroundColor Green
