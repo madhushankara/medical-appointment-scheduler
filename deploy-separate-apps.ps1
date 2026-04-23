@@ -98,6 +98,7 @@ heroku config:set NPM_CONFIG_PRODUCTION=true --app $frontendAppName
 heroku config:set REACT_APP_API_URL=$backendUrl --app $frontendAppName
 heroku config:set REACT_APP_DEBUG_MODE=false --app $frontendAppName
 heroku config:set REACT_APP_EMAILJS_PUBLIC_KEY=<your_emailjs_public_key_here> --app $frontendAppName
+heroku config:set REACT_APP_HUGGINGFACE_TOKEN=<your_huggingface_token_here> --app $frontendAppName
 heroku config:set REACT_APP_EMAILJS_SERVICE_ID=service_780diqb --app $frontendAppName
 heroku config:set REACT_APP_EMAILJS_TEMPLATE_APPOINTMENT=template_w4wezob --app $frontendAppName
 heroku config:set REACT_APP_EMAILJS_TEMPLATE_REGISTRATION=template_c23sb4o --app $frontendAppName
